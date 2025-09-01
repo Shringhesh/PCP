@@ -1,0 +1,14 @@
+def moveZeroes(self, nums):
+        c=0
+        l=[]
+        for i in range (len(nums)):
+            if nums[i]==0:
+                l.append(i)
+                c=c+1
+
+        while c>0:
+            nums.append(0)
+            c=c-1
+        for i in reversed(l):
+            nums.pop(i)
+moveZeros([0,1,0,3,12])
