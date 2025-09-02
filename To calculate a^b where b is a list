@@ -1,0 +1,15 @@
+#Power given in list
+class Solution(object):
+    def superPow(self, a, b):
+        d=""
+        for i in range(len(b)):
+            d=d+str(b[i])
+        res=1
+        e=int(d)
+        while e>0:
+            if e%2==1:
+                res=res*a
+            a=a*a
+            e=e//2
+        return res
+superPow(2, [1,0])  #output=1024
